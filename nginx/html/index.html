@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<title>Workshop de Big Data con Apache Spark</title>
+
+<xmp theme="spacelab" style="display:none;">
+
+# Trabajo Final Seminario Intensivo
+
+## Documentaci&#xF3;n
+Todo el material est&#xE1; [disponible en Github](https://github.com/MuttData/bigdata-workshop-es)
+
+## Puertos y Servicios
+El listado abajo contiene los puertos para acceso a las interfaces graficas de los servicios instalados.
+
+<table>
+  <thead>
+    <tr>
+      <th>Servicio</th>
+      <th>Acceso</th>
+      <th>Notas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spark</td>
+      <td>
+        <a href="/" onclick="javascript:event.target.port=8080" target="_blank">Spark Master</a>
+        <br /><br />
+        <a href="/" onclick="javascript:event.target.port=4040" target="_blank">Job Progress</a>
+      </td>
+      <td><br /><br /><b>Job Progress</b> solo funciona cuando el job este activo</td>
+
+    </tr>
+    <tr>
+      <td>pySpark</td>
+      <td><a href="/" onclick="javascript:event.target.port=8888" target="_blank">Jupyter Notebook</a></td>
+      <td>Token required, correr <code>./control-env.sh token</code></td>
+    </tr>
+    <tr>
+      <td>Superset</td>
+      <td><a href="/" onclick="javascript:event.target.port=8088" target="_blank">Dashboard</a></td>
+      <td>Username/Password creado durante superset-init </td>
+    </tr>
+  </tbody>
+</table>
+
+---
+## Sobre
+Gustavo Arjones &copy; 2017-2021
+[arjon.es](https://arjon.es) | [LinkedIn](https://linkedin.com/in/arjones/) | [Twitter](https://twitter.com/arjones)
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>

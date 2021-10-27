@@ -1,0 +1,149 @@
+version: "3"
+services:
+  docs:
+    container_name: docs
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - "./nginx/html:/usr/share/nginx/html:ro"
+
+  master:
+    container_name: master
+    image: arjones/pyspark:2.4.5
+    restart: always
+    command: ["/opt/spark/sbin/start-master.sh"]
+    environment:
+      MASTER: spark://master:7077
+      SPARK_NO_DAEMONIZE: 1
+    ports:
+      - 4040:4040
+      - 6066:6066
+      - 7077:7077
+      - 8080:8080
+    volumes:
+      - ./code:/app
+      - ./dataset:/dataset
+
+  worker1:
+    container_name: worker1
+    image: arjones/pyspark:2.4.5
+    restart: always
+    command: ["/opt/spark/sbin/start-slave.sh", "spark://master:7077", "--memory", "512m", "--cores", "2"]
+    environment:
+      MASTER: spark://master:7077
+      SPARK_NO_DAEMONIZE: 1
+    depends_on:
+      - master
+    ports:
+      - 4041:4040
+      - "6066"
+      - "7077"
+      - 8081:8080
+    volumes:
+      - ./code:/app
+      - ./dataset:/dataset
+
+  worker2:
+    container_name: worker2
+    image: arjones/pyspark:2.4.5
+    restart: always
+    command: ["/opt/spark/sbin/start-slave.sh", "spark://master:7077", "--memory", "512m", "--cores", "2"]
+    environment:
+      MASTER: spark://master:7077
+      SPARK_NO_DAEMONIZE: 1
+    depends_on:
+      - master
+    ports:
+      - 4042:4040
+      - "6066"
+      - "7077"
+      - 8082:8080
+    volumes:
+      - ./code:/app
+      - ./dataset:/dataset
+
+  jupyter:
+    container_name: jupyter
+    image: arjones/pyspark:2.4.5
+    restart: always
+    environment:
+      MASTER: spark://master:7077
+    depends_on:
+      - master
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./jupyter/notebook:/notebook
+      - ./dataset:/dataset
+      - ./code:/app
+
+  postgres:
+    container_name: postgres
+    image: postgres:11
+    restart: always
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres/scripts:/docker-entrypoint-initdb.d
+    environment:
+      POSTGRES_DB: workshop
+      POSTGRES_USER: workshop
+      POSTGRES_PASSWORD: w0rkzh0p
+    ports:
+      - "5435:5435"
+
+  redis:
+    container_name: redis
+    image: redis
+    restart: always
+
+  superset:
+    container_name: superset
+    image: amancevice/superset
+    restart: always
+    depends_on:
+      - redis
+      - postgres
+    environment:
+      MAPBOX_API_KEY: ${MAPBOX_API_KEY}
+      SUPERSET_HOME: /etc/superset
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./superset/conf/superset_config.py:/etc/superset/superset_config.py
+      - superset:/var/lib/superset
+
+  postgres-airflow:
+    container_name: postgres-airflow
+    image: postgres:11
+    restart: always
+    volumes:
+      - postgres-airflow-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: airflow
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+    ports:
+      - "5434:5432"
+
+  airflow:
+    container_name: airflow
+    image: puckel/docker-airflow
+    restart: always
+    depends_on:
+      - postgres-airflow
+    environment:
+      EXECUTOR: Local
+      LOAD_EX: n
+      AIRFLOW__WEBSERVER__WEB_SERVER_PORT: 9090
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres-airflow:5432/airflow
+      AIRFLOW__CORE__FERNET_KEY: "Eff80poJxv6LE4432pDC6OmD6N449KCSuhUAMLXiq4U="
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./airflow/dags:/usr/local/airflow/dags
+
+volumes:
+  postgres-data:
+  superset:
+  postgres-airflow-data:
