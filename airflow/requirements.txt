@@ -1,0 +1,9 @@
+jupyter
+findspark
+pandas
+matplotlib
+seaborn
+bs4
+lxml
+tqdm
+requests

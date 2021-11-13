@@ -11,6 +11,9 @@ apt-get update && \
   apt-get --no-install-recommends --no-install-suggests install -y \
   python3-pip && \
   pip3 install gensim
+  pip3 install bs4
+  pip3 install lxml
+  pip3 install tqdm
 
 ```
 

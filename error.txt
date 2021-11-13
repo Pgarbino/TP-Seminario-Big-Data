@@ -1,0 +1,21 @@
+#6 406.0     copying cffi/vengine_cpy.py -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     copying cffi/recompiler.py -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     copying cffi/vengine_gen.py -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     copying cffi/model.py -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     copying cffi/_cffi_include.h -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     copying cffi/parse_c_type.h -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     copying cffi/_embedding.h -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     copying cffi/_cffi_errors.h -> build/lib.linux-x86_64-3.7/cffi
+#6 406.0     running build_ext
+#6 406.0     building '_cffi_backend' extension
+#6 406.0     creating build/temp.linux-x86_64-3.7
+#6 406.0     creating build/temp.linux-x86_64-3.7/c
+#6 406.0     x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -DUSE__THREAD -DHAVE_SYNC_SYNCHRONIZE -I/usr/include/ffi -I/usr/include/libffi -I/usr/include/python3.7m -c c/_cffi_backend.c -o build/temp.linux-x86_64-3.7/c/_cffi_backend.o
+#6 406.0     c/_cffi_backend.c:15:10: fatal error: ffi.h: No such file or directory
+#6 406.0      #include <ffi.h>
+#6 406.0               ^~~~~~~
+#6 406.0     compilation terminated.
+#6 406.0     error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+#6 406.0     
+#6 406.0     ----------------------------------------
+#6 407.7 Command "/usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-install-lcbq_w45/cffi/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record /tmp/pip-record-nsvcchho/install-record.txt --single-version-externally-managed --compile" failed with error code 1 in /tmp/pip-install-lcbq_w45/cffi/

@@ -65,7 +65,7 @@ services:
 
   jupyter:
     container_name: jupyter
-    image: arjones/pyspark:2.4.5
+    image: patogarbino/pyspark:pro
     restart: always
     environment:
       MASTER: spark://master:7077
@@ -128,7 +128,7 @@ services:
 
   airflow:
     container_name: airflow
-    image: puckel/docker-airflow
+    image: patogarbino/docker-airflow:pro
     restart: always
     depends_on:
       - postgres-airflow
