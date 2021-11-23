@@ -38,18 +38,26 @@ Existe un archivo en Jupyter llamado scraping el cual realiza el mismo trabajo q
 ### Ejercicio de predicción de precios
 
 Realizción de un modelo de regresión para predecir el precio de las viviendas el cual se encuentra en Jupyter. Consta de 5 etapas:
+
 1- Recuperación de la informacion de la base de datos previamente guardada por el scraping. 
+
 2- Inicio de rutina de limpieza del dataframe:
 	a-Eliminación de columnas con un 50% o más de valores nulos.
 	b-Eliminación de columnas con poca varianza.
 	c-Eliminación de todas las rows cuyo target value (Precio) fuese nulo.
 	d-Reemplazo de valores nulos existentes por las medias de cada una de las columnas.
+	
 3- Enriquecimiento del dataframe con el campo comuna que lo obtenemos como un join entre los barrios y un dataset público de la ciudad de buenos aires.
+
 4- Validacíon de datos: se procede a verificar los valores minimos y máximos de cada columna eliminando outliers. 	
 	Ejemplo: Precio del M2 mayor a 10.000 USD o casos que tienen menos de 10 M2 totales.
+	
 5- El campo años en algunos casos contenía la fecha de construcción del edificio la cual se corrigió para homogeneizar el campo. 
+
 6- Preprocessing de los datos para transformarlo en un dataframe compatible con las librerías de ML de Spark. Utilizando One Hot encoder, string indexer y Vector assembler.
+
 7- Se probaron distintos modelos de regresión (lineal, decision trees, random forest, XGBoost) analizando las métricas r2, rmse y mae.
+
 8- Se eligió el modelo más prometedor: XGBoost y se realizó un gridsearch con cross validation para el tunning de algunos parametros: maxDepth, maxBins y maxIter)
 
 ### 
