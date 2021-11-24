@@ -1,0 +1,494 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "css": "",
+                "dashboard_title": "Viviendas",
+                "description": null,
+                "json_metadata": "{\"timed_refresh_immune_slices\": [], \"expanded_slices\": {}, \"refresh_frequency\": 0, \"default_filters\": \"{}\", \"color_scheme\": null, \"remote_id\": 1}",
+                "position_json": "{\"CHART-GNNLOrLdZ5\":{\"children\":[],\"id\":\"CHART-GNNLOrLdZ5\",\"meta\":{\"chartId\":2,\"height\":50,\"sliceName\":\"Precio promedio 10 primeras ubicaciones\",\"uuid\":\"d26a94de-4e0b-4ab9-b741-d1d50df63735\",\"width\":4},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-RBy196VSog\"],\"type\":\"CHART\"},\"CHART-RCR-LAu-w9\":{\"children\":[],\"id\":\"CHART-RCR-LAu-w9\",\"meta\":{\"chartId\":3,\"height\":50,\"sliceName\":\"Nube cantidad de publicaciones por ubicaci\\u00f3n\",\"uuid\":\"c95d5c3d-9189-4c3b-aecd-cd277bae5715\",\"width\":7},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-RBy196VSog\"],\"type\":\"CHART\"},\"CHART-_erok9Kh7t\":{\"children\":[],\"id\":\"CHART-_erok9Kh7t\",\"meta\":{\"chartId\":4,\"height\":50,\"sliceName\":\"10 Propiedes m\\u00e1s caras por ubicaci\\u00f3n\",\"uuid\":\"b269eba4-bdf1-4656-b103-7d5704f3bd78\",\"width\":11},\"parents\":[\"ROOT_ID\",\"GRID_ID\",\"ROW-FLzHv204a\"],\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-RBy196VSog\",\"ROW-FLzHv204a\"],\"id\":\"GRID_ID\",\"parents\":[\"ROOT_ID\"],\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Viviendas\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-FLzHv204a\":{\"children\":[\"CHART-_erok9Kh7t\"],\"id\":\"ROW-FLzHv204a\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"},\"ROW-RBy196VSog\":{\"children\":[\"CHART-GNNLOrLdZ5\",\"CHART-RCR-LAu-w9\"],\"id\":\"ROW-RBy196VSog\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"parents\":[\"ROOT_ID\",\"GRID_ID\"],\"type\":\"ROW\"}}",
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "seminario.Base Limpia",
+                            "datasource_type": "table",
+                            "id": 2,
+                            "params": "{\"adhoc_filters\": [], \"bottom_margin\": \"auto\", \"color_scheme\": \"supersetColors\", \"columns\": [], \"datasource\": \"3__table\", \"extra_form_data\": {}, \"groupby\": [\"Ubicacion\"], \"label_colors\": {}, \"metrics\": [{\"aggregate\": null, \"column\": null, \"expressionType\": \"SQL\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"AVG(\\\"Precio\\\")\", \"optionName\": \"metric_oj1sukwjn6_3ji78cbjkzt\", \"sqlExpression\": \"AVG(\\\"Precio\\\")\"}], \"order_desc\": true, \"row_limit\": 10, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"viz_type\": \"dist_bar\", \"x_ticks_layout\": \"auto\", \"y_axis_bounds\": [null, null], \"y_axis_format\": \"SMART_NUMBER\", \"remote_id\": 2, \"datasource_name\": \"Base Limpia\", \"schema\": \"seminario\", \"database_name\": \"Seminario\"}",
+                            "query_context": "{\"datasource\":{\"id\":3,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"Ubicacion\"],\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"AVG(\\\"Precio\\\")\",\"column\":null,\"aggregate\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"AVG(\\\"Precio\\\")\",\"optionName\":\"metric_oj1sukwjn6_3ji78cbjkzt\"}],\"annotation_layers\":[],\"row_limit\":10,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Precio promedio 10 primeras ubicaciones",
+                            "viz_type": "dist_bar"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "seminario.Untitled Query 2 11/24/2021 18:41:34",
+                            "datasource_type": "table",
+                            "id": 3,
+                            "params": "{\"adhoc_filters\": [], \"color_scheme\": \"supersetColors\", \"datasource\": \"4__table\", \"extra_form_data\": {}, \"label_colors\": {}, \"metric\": {\"aggregate\": null, \"column\": null, \"expressionType\": \"SQL\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"COUNT(\\\"Precio\\\")\", \"optionName\": \"metric_6lnjvvix2w4_68qfk4wm0a\", \"sqlExpression\": \"COUNT(\\\"Precio\\\")\"}, \"rotation\": \"square\", \"row_limit\": 5000, \"series\": \"Ubicacion\", \"size_from\": 10, \"size_to\": 70, \"slice_id\": 3, \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"word_cloud\", \"remote_id\": 3, \"datasource_name\": \"Untitled Query 2 11/24/2021 18:41:34\", \"schema\": \"seminario\", \"database_name\": \"Seminario\"}",
+                            "query_context": "{\"datasource\":{\"id\":4,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"Ubicacion\"],\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"COUNT(\\\"Precio\\\")\",\"column\":null,\"aggregate\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"COUNT(\\\"Precio\\\")\",\"optionName\":\"metric_6lnjvvix2w4_68qfk4wm0a\"}],\"annotation_layers\":[],\"row_limit\":5000,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{}}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "Nube cantidad de publicaciones por ubicaci\u00f3n",
+                            "viz_type": "word_cloud"
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "datasource_name": "seminario.Untitled Query 2 11/24/2021 18:41:34",
+                            "datasource_type": "table",
+                            "id": 4,
+                            "params": "{\"adhoc_filters\": [], \"all_columns\": [], \"color_pn\": true, \"datasource\": \"4__table\", \"extra_form_data\": {}, \"groupby\": [\"Ubicacion\"], \"metrics\": [{\"aggregate\": null, \"column\": null, \"expressionType\": \"SQL\", \"hasCustomLabel\": false, \"isNew\": false, \"label\": \"MAX(\\\"Precio\\\")\", \"optionName\": \"metric_t43gblgs17_lhch3cm4m2o\", \"sqlExpression\": \"MAX(\\\"Precio\\\")\"}], \"order_by_cols\": [], \"order_desc\": true, \"percent_metrics\": [], \"query_mode\": \"aggregate\", \"row_limit\": 10, \"server_page_length\": 10, \"show_cell_bars\": true, \"slice_id\": 4, \"table_timestamp_format\": \"smart_date\", \"time_grain_sqla\": \"P1D\", \"time_range\": \"No filter\", \"time_range_endpoints\": [\"inclusive\", \"exclusive\"], \"url_params\": {}, \"viz_type\": \"table\", \"remote_id\": 4, \"datasource_name\": \"Untitled Query 2 11/24/2021 18:41:34\", \"schema\": \"seminario\", \"database_name\": \"Seminario\"}",
+                            "query_context": "{\"datasource\":{\"id\":4,\"type\":\"table\"},\"force\":false,\"queries\":[{\"time_range\":\"No filter\",\"filters\":[],\"extras\":{\"time_grain_sqla\":\"P1D\",\"time_range_endpoints\":[\"inclusive\",\"exclusive\"],\"having\":\"\",\"having_druid\":[],\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"Ubicacion\"],\"metrics\":[{\"expressionType\":\"SQL\",\"sqlExpression\":\"MAX(\\\"Precio\\\")\",\"column\":null,\"aggregate\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"MAX(\\\"Precio\\\")\",\"optionName\":\"metric_t43gblgs17_lhch3cm4m2o\"}],\"orderby\":[[{\"expressionType\":\"SQL\",\"sqlExpression\":\"MAX(\\\"Precio\\\")\",\"column\":null,\"aggregate\":null,\"isNew\":false,\"hasCustomLabel\":false,\"label\":\"MAX(\\\"Precio\\\")\",\"optionName\":\"metric_t43gblgs17_lhch3cm4m2o\"},false]],\"annotation_layers\":[],\"row_limit\":10,\"timeseries_limit\":0,\"order_desc\":true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"post_processing\":[]}],\"result_format\":\"json\",\"result_type\":\"full\"}",
+                            "slice_name": "10 Propiedes m\u00e1s caras por ubicaci\u00f3n",
+                            "viz_type": "table"
+                        }
+                    }
+                ],
+                "slug": null
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "column_name": "Precio",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 18,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "INT",
+                            "uuid": "e2409ba4-88e1-4a26-a110-0fb163bea25a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "column_name": "Ubicacion",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 19,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "STRING",
+                            "uuid": "6191f7ae-d927-4cc6-b768-2fbb78c04cf2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "column_name": "Barrio",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 20,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "STRING",
+                            "uuid": "df69cf8c-932b-404e-be99-23b9920adb2e",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "column_name": "Metros",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 21,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "FLOAT",
+                            "uuid": "ce9168d9-59ae-4640-b5b1-2c175d118569",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "column_name": "Dorm",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 22,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "INT",
+                            "uuid": "01c8d955-fb67-48f3-b533-b2d3e6dd96b2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "column_name": "Ba\u00f1os",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 23,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "INT",
+                            "uuid": "e0af106e-76b4-42f5-9bb7-0d329aa6307a",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "column_name": "A\u00f1os",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 24,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 4,
+                            "type": "INT",
+                            "uuid": "c8ecee2a-420c-4abf-9e8e-c3ca8d090aff",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:41:34"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 4,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 4,
+                            "uuid": "873e496f-b441-4a51-a72e-1b28288470e6",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 4, \"database_name\": \"Seminario\"}",
+                "schema": "seminario",
+                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT * from viviendas \nWHERE \"Precio\" <> 999 AND \"Ubicacion\" <> '999' AND \"Barrio\" <>'999' AND \"Dorm\" <>999 AND \"Ba\u00f1os\" <>999 AND \"A\u00f1os\" <>999 and \"Metros\"<> 999 and \"Metros\">10",
+                "table_name": "Untitled Query 2 11/24/2021 18:41:34",
+                "template_params": null
+            }
+        },
+        {
+            "__SqlaTable__": {
+                "cache_timeout": null,
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "column_name": "Precio",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 11,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "INT",
+                            "uuid": "6c2dd94e-e4f6-413d-9006-d71dea1f6053",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "column_name": "Ubicacion",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 12,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "STRING",
+                            "uuid": "36cb3790-0071-4614-96e5-0efa067409d1",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "column_name": "Barrio",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 13,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "STRING",
+                            "uuid": "82a5dabd-de1f-43ed-b1e8-9fa2b63b6238",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "column_name": "Metros",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 14,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "FLOAT",
+                            "uuid": "e94d5113-df17-459c-9cb8-f1f1d61feef2",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "column_name": "Dorm",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 15,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "INT",
+                            "uuid": "5a59c1a2-9bd6-429b-a3e2-52bd17923548",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "column_name": "Ba\u00f1os",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 16,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "INT",
+                            "uuid": "b1b71bc1-710f-483f-b971-57957f370b85",
+                            "verbose_name": null
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "column_name": "A\u00f1os",
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "description": null,
+                            "expression": null,
+                            "filterable": true,
+                            "groupby": true,
+                            "id": 17,
+                            "is_active": true,
+                            "is_dttm": false,
+                            "python_date_format": null,
+                            "table_id": 3,
+                            "type": "INT",
+                            "uuid": "abea75d7-b82d-4d19-b0ef-d7865dcc9634",
+                            "verbose_name": null
+                        }
+                    }
+                ],
+                "database_id": 1,
+                "default_endpoint": null,
+                "description": null,
+                "extra": null,
+                "fetch_values_predicate": null,
+                "filter_select_enabled": false,
+                "main_dttm_col": null,
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "changed_by_fk": 2,
+                            "changed_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "created_by_fk": 2,
+                            "created_on": {
+                                "__datetime__": "2021-11-24T21:30:17"
+                            },
+                            "d3format": null,
+                            "description": null,
+                            "expression": "count(*)",
+                            "extra": null,
+                            "id": 3,
+                            "metric_name": "count",
+                            "metric_type": null,
+                            "table_id": 3,
+                            "uuid": "f41720fa-0bb0-4c15-888f-a3bae556a3ed",
+                            "verbose_name": null,
+                            "warning_text": null
+                        }
+                    }
+                ],
+                "offset": 0,
+                "params": "{\"remote_id\": 3, \"database_name\": \"Seminario\"}",
+                "schema": "seminario",
+                "sql": "-- Note: Unless you save your query, these tabs will NOT persist if you clear your cookies or change browsers.\n\nSELECT * from viviendas \nWHERE \"Precio\" <> 999 AND \"Ubicacion\" <> '999' AND \"Barrio\" <>'999' AND \"Dorm\" <>999 AND \"Ba\u00f1os\" <>999 AND \"A\u00f1os\" <>999",
+                "table_name": "Base Limpia",
+                "template_params": null
+            }
+        }
+    ]
+}
