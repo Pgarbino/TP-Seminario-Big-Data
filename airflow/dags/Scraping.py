@@ -45,7 +45,7 @@ def _scrape_page(**context):
 
     for j in range(2,paginas): # PARA MENOR TIEMPO reemplazar paginas por otro valor así no se trae la totalidad de páginas 
     
-        params = {"api_key":"CDno35uJsvFXiXpMNf42BVxJCmE5GxmP",
+        params = {"api_key":"AD4b2btQq62KsBtRntfXFz0VCt0HglWu",
         "url":"https://www.argenprop.com/departamento-venta-region-capital-federal-1-o-más-cocheras-pagina-"+str(j)}
         
         r = requests.request("GET", url, params=params)
