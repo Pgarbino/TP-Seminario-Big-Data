@@ -1,7 +1,8 @@
 # Trabajo Final - Seminario Intensivo de Tópicos Avanzados
 
-Alumnos: Lucas Serrenho Pfefferkorn
-                Patricio Garbino
+Alumnos: 
+- Lucas Serrenho Pfefferkorn                                                                                                                                                     
+- Patricio Garbino
 
 
 ## Introducción
@@ -24,16 +25,16 @@ Index: Modificamos el archivo Index.html para cambiar un poco la pagina de inici
 
 La recolección de datos la realizamos creando un Dag en Airflow el cual esta programado para correr todos los días lunes a las 7 am. El mismo consta de cuatro etapas. 
 
--1- La etapa uno busca el número de páginas total de las que descargaremos información.
--2- La etapa dos realiza la descarga de información de cada una de las páginas, la parsea y la guarda en dataframe de pandas.
--3- La etapa tres crea la tabla viviendas en postgres en caso de que esta no exista.
--4- La etapa cuatro guarda la información en la base de datos.
+1. La etapa uno busca el número de páginas total de las que descargaremos información.
+2. La etapa dos realiza la descarga de información de cada una de las páginas, la parsea y la guarda en dataframe de pandas.
+3. La etapa tres crea la tabla viviendas en postgres en caso de que esta no exista.
+4. La etapa cuatro guarda la información en la base de datos.
 
 Para esto fue necesario conectar Airflow con nuesta base Postgres. Es necesario levantar esta conexión para que todo funcione correctamente.
 
 Dado que utilizamos una API de pago en modo free para evitar ser bloqueados por el servidor de argenprop, es probable que al momento de querer correr el dag esta no funcione. Se puede crear una cuenta para recibir una nueva key en www.webscrapingapi.com y reemplazarla en el Dag, de esta forma funcionará sin problemas.
 
-Existe un archivo en Jupyter llamado scraping el cual realiza el mismo trabajo que nuestro Dag, está seteado para realizar el scraping de sólo 10 páginas y utilizando la ip local para demostrar que funciona.
+Existe un archivo en Jupyter llamado scraping el cual realiza el mismo trabajo que nuestro Dag, está seteado para realizar el scraping de sólo 8 páginas y utilizando la ip local para demostrar que funciona.
 
 ### Ejercicio de predicción de precios
 
